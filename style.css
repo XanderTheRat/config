@@ -11,7 +11,6 @@ window#waybar {
     background: linear-gradient(135deg, rgba(26, 32, 44, 0.90) 0%, rgba(45, 55, 72, 0.90) 100%);
     color: #e2e8f0;
 }
-/* Workspaces */
 #workspaces {
     margin: 0 8px;
     background: rgba(0, 0, 0, 0.3);
@@ -53,7 +52,6 @@ window#waybar {
     50% { opacity: 0.6; }
 }
 
-/* Mode */
 #mode {
     background: linear-gradient(135deg, #ed8936 0%, #dd6b20 100%);
     color: #1a202c;
@@ -63,7 +61,6 @@ window#waybar {
     font-weight: 600;
 }
 
-/* Scratchpad */
 #scratchpad {
     background: rgba(159, 122, 234, 0.2);
     color: #b794f4;
@@ -76,7 +73,6 @@ window#waybar {
     background: transparent;
 }
 
-/* Clock */
 #clock, #custom-clock {
     background: linear-gradient(#667eea 0%, #5a67d8 100%);
     color: #ffffff;
@@ -87,7 +83,6 @@ window#waybar {
     transition: all 0.2s ease;
 }
 
-/* Right modules */
 #pulseaudio,
 #custom-network,
 #battery,
@@ -108,7 +103,8 @@ window#waybar {
     background: rgba(255, 255, 255, 0.15);
 }
 
-/* Pulseaudio */
+
+
 #pulseaudio {
     color: #68d391;
 }
@@ -118,7 +114,8 @@ window#waybar {
     background: rgba(113, 128, 150, 0.2);
 }
 
-/* Network */
+
+
 #custom-network {
     color: #63b3ed;
 }
@@ -134,7 +131,7 @@ window#waybar {
     }
 }
 
-/* Battery */
+
 #battery {
     color: #68d391;
 }
@@ -166,7 +163,7 @@ window#waybar {
     }
 }
 
-/* Tray */
+
 #tray {
     padding: 2px 10px;
 }
@@ -181,7 +178,6 @@ window#waybar {
 }
 
 
-/*mpris*/
 #mpris {
 	color: #1DB954;
 }
