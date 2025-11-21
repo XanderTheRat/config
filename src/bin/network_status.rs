@@ -31,6 +31,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>>{
 			2_u8 | 3_u8 => {
 				let ip_output = Command::new("ip").arg("-br").arg("a").output()?;
 				let ip = String::from_utf8_lossy(&ip_output.stdout).trim().to_string();
+				
+				// You have to adapt the chain that is used to your network interfaces. If the active interface is first when you execute ip -br a, replace 'rsplit' with 'split'
 				let vec_ip: Vec<&str> = ip.rsplit('\n').collect();
 				let output_ip: Vec<&str> = vec_ip[0].split_whitespace().collect();
 
