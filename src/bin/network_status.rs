@@ -51,7 +51,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>>{
 		}
 	}
 	else {
-		println!("Le fichier n'existe pas !");
+		println!("Fichier non trouvé : {}", modefile);
 	}
 
 	Ok(())

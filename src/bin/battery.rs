@@ -119,7 +119,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>>{
 				_ => {}
 		}
 	} else {
-		println!("Erreur de nom de fichier");
+		println!("Fichier non trouvé : {}", state_file);
 	};
 
 	Ok(())

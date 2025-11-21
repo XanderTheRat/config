@@ -6,7 +6,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 	let mode_read = if Path::new(state_file).exists() {
 	        fs::read_to_string(state_file)?.trim().parse::<u8>()?
 	} else {
-		println!("Erreur de nom de fichier");
+		println!("Fichier non trouvé : {}", state_file);
 		1
 	};
 
