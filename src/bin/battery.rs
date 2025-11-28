@@ -97,7 +97,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>>{
 					println!("<span foreground='{}'>{}% {}</span>", color, battery_percent, state[battery_percent/20]);
 				}
 				else {
-						println!("<span foreground={}>{}% {}</span>", color, battery_percent, state[battery_percent/20]);
+						println!("<span foreground='{}'>{}% {}</span>", color, battery_percent, state[battery_percent/20]);
 					}	
 				}
 				2 => {
