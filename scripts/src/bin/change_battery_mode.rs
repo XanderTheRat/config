@@ -1,13 +1,16 @@
+use std::env;
 use std::fs;
 use std::path::Path;
 
 fn main() ->  Result<(), Box<dyn std::error::Error>> {
-	let state_file = "/home/martin/.config/waybar/scripts/battery_state";
+	let home = env::var("HOME").expect("$HOME not found");
+	
+	let state_file = format!("{}/.config/waybar/scripts/network_status", home);
 
-	let mut mode = if Path::new(state_file).exists() {
-	        fs::read_to_string(state_file)?.trim().parse::<u8>()?
+	let mut mode = if Path::new(&state_file).exists() {
+	        fs::read_to_string(&state_file)?.trim().parse::<u8>()?
 	} else {
-		println!("Fichier non trouvé : {}", state_file);
+		println!("File not found : {}", state_file);
 		1
 	};
 

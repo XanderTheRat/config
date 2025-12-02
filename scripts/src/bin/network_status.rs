@@ -1,15 +1,18 @@
+use std::env;
 use std::fs;
 use std::process::Command;
 
 fn main() -> Result<(), Box<dyn std::error::Error>>{
-	let modefile = "/home/martin/.config/waybar/scripts/network_status";
-	let file_exist = fs::exists(modefile);
+	let home = env::var("HOME").expect("$HOME not found");
+
+	let modefile = format!("{}/.config/waybar/scripts/network_status", home);
+	let file_exist = fs::exists(&modefile);
 	let exists = match file_exist {
 		Ok(value) => value,
 		Err(_) => false,
 	};
 	
-	let network_mode = fs::read_to_string(modefile)?.trim().parse::<u8>()?;
+	let network_mode = fs::read_to_string(&modefile)?.trim().parse::<u8>()?;
 	let _: Result<f64, Box<dyn std::error::Error>> = Ok(network_mode.into());
 	
 	if exists {
@@ -52,7 +55,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>>{
 		}
 	}
 	else {
-		println!("Fichier non trouvé : {}", modefile);
+		println!("File not found : {}", modefile);
 	}
 	Ok(())
 }
