@@ -202,10 +202,12 @@
 
     "custom/left": {
         "format" : "",
+        "on-click": "playerctl previous",
         "tooltip": false
     },
     "custom/right": {
         "format" : "",
+        "on-click": "playerctl next",
         "tooltip": false
     },
 
